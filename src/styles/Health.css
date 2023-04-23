@@ -1,0 +1,23 @@
+.health-bar {
+    position: relative;
+    left: 10%;
+    font-size: 2em;
+    width: 50%;
+}
+
+.health-bar>h2 {
+    font-weight: bold;
+    display: inline;
+}
+
+#bar {
+    position: relative;
+    right: 1em;
+    max-width: 50%;
+    border: 1px solid black;
+}
+
+#bar>div {
+    background-color: green;
+    height: 20px;
+}

@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilities */
+.hb {
+    margin: 1em auto;
+}
+
+.container {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    background-color: #000000;
+    height: 60vh;
+}
+
+.bg-video{
+    position: relative;
+    background: url('../../public/pokemonBG.mp4') no-repeat center/80% center/50% fixed;
+    background-size: cover cover;
+    z-index: -1;
+}
+
+#videoSource {
+    display: none;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.lower-half {
+    background-color: #21afe3;
+}
+
+#start-button {
+    margin: 1em auto;
+    min-width: 10em;
+}
+
+.Vs{
+    font-size: 2em;
+    font-weight: bolder;
+    position: relative;
+    transform: translateY(50%);
+}

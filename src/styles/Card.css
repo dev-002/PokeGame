@@ -1,0 +1,86 @@
+.center {
+  margin: 0 auto;
+}
+
+.pokemon-card {
+  margin: 1em auto;
+  min-height: 55vh;
+  width: 70%;
+  min-width: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  padding: 0.66em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-image {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  width: 70%;
+  height: 50%;
+  margin-bottom: 10px;
+}
+
+.pokemon-name {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.hrule {
+  margin: 0 auto 1em;
+  width: 70%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.pokemon-type {
+  font-size: 18px;
+  margin-bottom: 10px;
+  /* color: aqua; */
+}
+
+/* Selecting color according to Type */
+.pokemon-type:contains("grass"){
+  color: green;
+}
+
+.pokemon-type:contains("fire"){
+  color: red;
+}
+
+.pokemon-type:contains("water"){
+  color: blue;
+}
+
+.pokemon-type:contains("sky"){
+  color: lightblue;
+}
+
+.pokemon-type:contains("electic"){
+  color: yellow;
+}
+
+.pokemon-type:contains("steel"){
+  color: grey;
+}
+/* Isn't working */
+
+.pokemon-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-stat {
+  font-size: 1em;
+  margin: 0 1.2em 0.5em 0;
+}

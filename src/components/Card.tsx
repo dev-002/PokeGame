@@ -1,7 +1,7 @@
 // Style sheets 
 import '../styles/Card.css'
 
-// Pops passed from App
+// Props passed from App
 /*
 Props shoudl be defined acurately and array is represented with [] in the end
 */

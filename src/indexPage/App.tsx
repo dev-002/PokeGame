@@ -5,6 +5,8 @@ import Card from "./components/Card";
 import HealthPoint from "./components/HealthPoint";
 // Style sheets
 import './styles/Index.css'
+// Middleware Functions
+import {Draw} from '../../middlewareFunction';
 
 function App() {
   // States 
@@ -64,21 +66,6 @@ function App() {
     sethealthUpdate(false);
   }
 
-  async function Draw(setFunction: { (value: SetStateAction<{ id: number; image: string; name: string; stats: { base_stat: number; stat: { name: string; }; }[]; types: { slot: number; type: { name: string; }; }[]; }>): void; (value: SetStateAction<{ id: number; image: string; name: string; stats: { base_stat: number; stat: { name: string; }; }[]; types: { slot: number; type: { name: string; }; }[]; }>): void; (arg0: () => any): void; }, setIsFetched: { (value: SetStateAction<boolean>): void; (value: SetStateAction<boolean>): void; (arg0: boolean): void; }) {
-    const pokeId = Math.floor(Math.random() * 1010 + 1);
-    const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokeId}/`;
-    await fetch(pokemonUrl)
-      .then(response => response.json())
-      .then(data => {
-        setIsFetched(true);
-        setFunction(() => {
-          return { ...data, image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeId}.png` }
-        })
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }
 
   function Damage() {
     if (pokeData1.stats[2].base_stat < pokeData2.stats[1].base_stat) {
@@ -105,7 +92,8 @@ function App() {
       <div className="container">
 
         <Header />
-        <button id="start-button" className="btn btn-primary btn-lg" onClick={(e: SyntheticEvent) => handleShow(e)}>Start</button>
+        {/* <button id="start-button" className="btn btn-primary btn-lg" onClick={(e: SyntheticEvent) => handleShow(e)}>Start</button> */}
+        <a href="gameField.html" className="text-center"> <button id="start-button" className="btn btn-primary btn-lg">Start</button></a>
         <br className="hb" />
 
         <div className="container">
